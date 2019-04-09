@@ -32,6 +32,13 @@ Our service uses the following algorithms:
 * SMITH_WATERMAN_GOTOH
 
 
+### External Dependencies needed in order to run service
+
+* MySQL
+    * Execute: `docker-compose up` in order to have a running instance of MySQL DB.
+    * Execute: `docker-compose down` in order to shutdown MySQL DB.
+
+
 ### Integration Tests (run docker-compose first)
 
 * Execute: `mvn clean verify`
@@ -44,14 +51,7 @@ Our service uses the following algorithms:
 * Fast: `mvn clean install -DskipITs && docker build -t chriniko/eresearch-author-matcher:1.0 .`
 
 
-### External Dependencies needed in order to run service
-
-* MySQL
-    * Execute: `docker-compose up` in order to have a running instance of MySQL DB.
-    * Execute: `docker-compose down` in order to shutdown MySQL DB.
-
-
-#### How to run service (not dockerized)
+### How to run service (not dockerized)
 * Execute: `docker-compose up`
 
 * Two options:
@@ -65,7 +65,7 @@ Our service uses the following algorithms:
 * (Optional) When you finish: `docker-compose down`
 
 
-#### How to run service (dockerized)
+### How to run service (dockerized)
 * Uncomment the section in `docker-compose.yml` file for service: `eresearch-author-matcher:`
 
 * Execute: `mvn clean install -DskipITs`
