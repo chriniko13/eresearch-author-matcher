@@ -79,7 +79,7 @@ Our service uses the following algorithms:
 
 ### Example Request
 
-
+```json
 {
 	"first-author-name":{
 		"firstname":"Dimitris",
@@ -93,10 +93,13 @@ Our service uses the following algorithms:
 	}
 }
 
+```
+
+
 
 ### Example Response
 
-
+```json
 {
   "operation-result": true,
   "process-finished-date": 1487182289.869,
@@ -215,3 +218,6 @@ Our service uses the following algorithms:
     }
   }
 }
+
+```
+
