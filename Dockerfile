@@ -9,7 +9,7 @@ COPY . /app
 #RUN mvn -v
 #RUN mvn clean install -DskipTests
 
-EXPOSE 8080
+EXPOSE 8881
 
 LABEL maintainer='nick.christidis@yahoo.com'
 

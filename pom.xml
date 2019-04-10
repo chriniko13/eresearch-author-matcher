@@ -150,7 +150,7 @@
     <build>
         <plugins>
 
-            <!-- Maven Plugin -->
+            <!-- Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
