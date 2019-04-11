@@ -45,10 +45,10 @@ Our service uses the following algorithms:
 
 
 ### Create Docker Image
-* Execute: `mvn clean install -DskipITs`
+* Execute: `mvn clean install -DskipITs=true`
 * Execute: `docker build -t chriniko/eresearch-author-matcher:1.0 .` in order to build docker image.
 
-* Fast: `mvn clean install -DskipITs && docker build -t chriniko/eresearch-author-matcher:1.0 .`
+* Fast: `mvn clean install -DskipITs=true && docker build -t chriniko/eresearch-author-matcher:1.0 .`
 
 
 ### How to run service (not dockerized)
@@ -56,7 +56,7 @@ Our service uses the following algorithms:
 
 * Two options:
     * Execute: 
-        * `mvn clean install -DskipITs`
+        * `mvn clean install -DskipITs=true`
         * `java -jar -Dspring.profiles.active=dev target/eresearch-author-matcher-1.0-boot.jar`
                 
     * Execute:
@@ -68,7 +68,7 @@ Our service uses the following algorithms:
 ### How to run service (dockerized)
 * Uncomment the section in `docker-compose.yml` file for service: `eresearch-author-matcher:`
 
-* Execute: `mvn clean install -DskipITs`
+* Execute: `mvn clean install -DskipITs=true`
 
 * Execute: `docker-compose build`
 
