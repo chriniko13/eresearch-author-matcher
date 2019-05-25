@@ -3,11 +3,9 @@ package com.eresearch.author.matcher.service;
 import com.codahale.metrics.Timer;
 import com.eresearch.author.matcher.dto.*;
 import com.eresearch.author.matcher.metrics.entries.ServiceLayerMetricEntry;
-import com.eresearch.author.matcher.repository.AuthorMatcherRepository;
 import org.simmetrics.StringMetric;
 import org.simmetrics.metrics.StringMetrics;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -28,12 +26,6 @@ public class AuthorMatcherServiceImpl implements AuthorMatcherService {
 
     @Autowired
     private Clock clock;
-
-    @Autowired
-    private AuthorMatcherRepository authorMatcherRepository;
-
-    @Value("${enable.persistence.results}")
-    private String enablePersistenceForResults;
 
     private Map<StringMetricAlgorithm, StringMetric> stringMetricsToApply;
 
@@ -84,10 +76,6 @@ public class AuthorMatcherServiceImpl implements AuthorMatcherService {
             authorMatcherResultsDto.setProcessFinishedDate(Instant.now(clock));
             authorMatcherResultsDto.setAuthorComparisonDto(authorComparisonDto);
             authorMatcherResultsDto.setResults(stringMetricResults);
-
-            if (Boolean.valueOf(enablePersistenceForResults)) {
-                authorMatcherRepository.save(authorComparisonDto, authorMatcherResultsDto);
-            }
 
             return authorMatcherResultsDto;
 

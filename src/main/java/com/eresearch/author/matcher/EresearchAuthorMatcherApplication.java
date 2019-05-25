@@ -1,8 +1,6 @@
 package com.eresearch.author.matcher;
 
 import com.eresearch.author.matcher.application.event.listener.*;
-import com.eresearch.author.matcher.db.DbOperations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
@@ -34,12 +32,8 @@ public class EresearchAuthorMatcherApplication implements CommandLineRunner, App
 
     }
 
-    @Autowired
-    private DbOperations dbOperations;
-
     @Override
     public void run(String... strings) throws Exception {
-        dbOperations.runTask();
     }
 
     @Override

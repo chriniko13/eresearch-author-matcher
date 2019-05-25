@@ -31,15 +31,7 @@ Our service uses the following algorithms:
 * SMITH_WATERMAN
 * SMITH_WATERMAN_GOTOH
 
-
-### External Dependencies needed in order to run service
-
-* MySQL
-    * Execute: `docker-compose up` in order to have a running instance of MySQL DB.
-    * Execute: `docker-compose down` in order to shutdown MySQL DB.
-
-
-### Integration Tests (run docker-compose first)
+### Integration Tests
 
 * Execute: `mvn clean verify`
 
