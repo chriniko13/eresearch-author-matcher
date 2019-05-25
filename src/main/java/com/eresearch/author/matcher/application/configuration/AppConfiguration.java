@@ -85,15 +85,6 @@ public class AppConfiguration implements SchedulingConfigurer {
         return Clock.system(zoneId);
     }
 
-    @Value("${db.url}")
-    private String dbUrl;
-
-    @Value("${db.username}")
-    private String username;
-
-    @Value("${db.password}")
-    private String password;
-
     @Bean
     @Qualifier("appMetricRegistry")
     public MetricRegistry metricRegistry() {
